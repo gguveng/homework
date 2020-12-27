@@ -1,0 +1,61 @@
+i=0
+lessonss=[]
+name=str(input('Enter your name:'))
+surname=str(input('Enter your surname:'))
+while i<3:
+    Name=input('Write student name:')
+    Surname=input('Write student surname:')
+
+    if (Name == name and Surname== surname):
+        print('WELCOME:',  name + surname)
+        break
+    elif not (Name == name or Surname==surname):
+        i+=1
+        if i==3:
+            print('Try again later')
+
+lessons=['math','picture','physic','geography','biology']
+number_of_courses=(len(lessons))
+
+count=0
+while count<=5:
+    courseselection=int(input('Choose a min of three to a max of five courses:'))
+
+count+=1
+print('You have taken {} courses'.format(len(lessonss)))
+if count<3:
+    print('You must choose at least 3 courses or you will be considered stuck.')
+    
+if 3<=count<=5:
+    print('Your number of courses is sufficient')
+
+print('Select a course and enter its grades:')
+
+midterm=int(input('Enter a midterm note:'))
+print(midterm)
+final=int(input('Enter a final note:'))
+print(final)
+project=int(input('Enter a project note:'))
+print(project)
+dictionary={'midterm':'','final':'', 'project':''}
+
+average=midterm*0.3+final*0.5+project*0.2
+
+if average>90:
+    letter_grade='AA'
+elif 70<average<90:
+    letter_grade='BB'
+elif 50<average<70:
+    letter_grade='CC'
+elif 30<average<50:
+    letter_grade='DD'
+
+print('Your result: {}'.format(letter_grade))
+
+if letter_grade=='FF':
+    print('You stayed.')
+else:
+    print('Congratulations,you passed.')
+
+    
+
