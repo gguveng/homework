@@ -1,0 +1,25 @@
+my_list=list()
+
+first_name= input('Enter your firstname:')
+my_list.append(['First Name', first_name])
+
+last_name= input('Enter your lastname:')
+my_list.append(['Last Name',last_name])
+
+age= int(input('Enter your age:'))
+my_list.append(['Age',age])
+
+date_of_birth=int(input('Enter your date of birth(just year)'))
+my_list.append(['Date of birth',date_of_birth])
+
+print(f'Name:{first_name} , Surname:{last_name} , Age:{age} , Date of birth:{date_of_birth}')
+
+for info in my_list:
+    print(f'{info[0]} : {info[1]}')
+
+for info in my_list:
+    if info[0]== 'Age' or info[0]=='age':
+        if info[1]<18:
+            print('You cant go out because its too dangerous.')
+        else:
+            print('You can go out to the street.')
