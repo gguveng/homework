@@ -1,0 +1,32 @@
+name= input('Enter your name:')
+print('Welcome {}'.format(name))
+
+search_word= 'flowers'
+prediction_string=''
+
+rights=7
+
+while rights>0:
+    letter=0
+    for character in search_word:
+        if character in prediction_string:
+            print(character)
+        else:
+            print('*')
+            letter+=1
+
+    if letter==0:
+        print('you win')
+        break
+
+    player=input('Enter letters:')
+    prediction_string+=player
+
+    if player not in search_word:
+        rights-=1
+        print('error')
+        print('your remaining right {}'.format(rights))
+
+        if rights==0:
+            print('You are out of rights')
+            print('Game over, you can leave')
